@@ -47,7 +47,7 @@ Archive member included because of file (symbol)
 ../../library/os-lib/lib.X.a(uart.o)
                               ./output/main.o (_Uart1_Init)
 ../../library/os-lib/lib.X.a(led.o)
-                              ./output/main.o (_LED_Init)
+                              ./output/main.o (_LED_Set)
 ../../library/os-lib/lib.X.a(event.o)
                               ./output/main.o (_OS_EventLoop)
 ../../library/os-lib/lib.X.a(os.o)
@@ -116,10 +116,10 @@ section                    address   length (PC units)   length (bytes) (dec)
 .const                       0x91e                 0x8             0xc  (12)
 .text                        0x926              0x2292          0x33db  (13275)
 .dinit                      0x2bb8                0x62            0x93  (147)
-.text                       0x2c1a                0x66            0x99  (153)
-.init.delay32               0x2c80                0x1c            0x2a  (42)
+.text                       0x2c1a                0x6e            0xa5  (165)
+.init.delay32               0x2c88                0x1c            0x2a  (42)
 
-                 Total "program" memory used (bytes):         0x3fea  (16362) 32%
+                 Total "program" memory used (bytes):         0x3ff6  (16374) 32%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -347,7 +347,7 @@ External Symbols in Program Memory (by address):
                   0x002c2c                  _MCU_LockRegisters
                   0x002c3e                  _MCU_Init
                   0x002c5a                  _main
-                  0x002c80                  ___delay32
+                  0x002c88                  ___delay32
 
 External Symbols in Program Memory (by name):
 
@@ -460,7 +460,7 @@ External Symbols in Program Memory (by name):
                   0x000406                  __U2RXInterrupt
                   0x0004c6                  __U2TXInterrupt
                   0x000600                  ___addsf3
-                  0x002c80                  ___delay32
+                  0x002c88                  ___delay32
                   0x0006ba                  ___divsf3
                   0x00073e                  ___eqsf2
                   0x000742                  ___fixunssfsi
@@ -653,21 +653,21 @@ __CONFIG1
  .debug_abbrev    0x000f02        0x10f ../../library/os-lib/lib.X.a(beep.o)
  .debug_abbrev    0x001011         0xb6 ../../library/os-lib/lib.X.a(queue.o)
 
-.debug_line       0x000000        0xf89
+.debug_line       0x000000        0xf8b
  *(.debug_line)
- .debug_line      0x000000         0x36 ./output/main.o
- .debug_line      0x000036         0xab ../../library/os-lib/lib.X.a(mcu.o)
- .debug_line      0x0000e1        0x270 ../../library/os-lib/lib.X.a(uart.o)
- .debug_line      0x000351        0x183 ../../library/os-lib/lib.X.a(led.o)
- .debug_line      0x0004d4         0xc7 ../../library/os-lib/lib.X.a(event.o)
- .debug_line      0x00059b        0x21e ../../library/os-lib/lib.X.a(os.o)
- .debug_line      0x0007b9        0x177 ../../library/os-lib/lib.X.a(psw.o)
- .debug_line      0x000930        0x185 ../../library/os-lib/lib.X.a(stimer.o)
- .debug_line      0x000ab5        0x112 ../../library/os-lib/lib.X.a(str.o)
- .debug_line      0x000bc7        0x198 ../../library/os-lib/lib.X.a(worker.o)
- .debug_line      0x000d5f         0xf2 ../../library/os-lib/lib.X.a(adc.o)
- .debug_line      0x000e51         0xce ../../library/os-lib/lib.X.a(beep.o)
- .debug_line      0x000f1f         0x6a ../../library/os-lib/lib.X.a(queue.o)
+ .debug_line      0x000000         0x38 ./output/main.o
+ .debug_line      0x000038         0xab ../../library/os-lib/lib.X.a(mcu.o)
+ .debug_line      0x0000e3        0x270 ../../library/os-lib/lib.X.a(uart.o)
+ .debug_line      0x000353        0x183 ../../library/os-lib/lib.X.a(led.o)
+ .debug_line      0x0004d6         0xc7 ../../library/os-lib/lib.X.a(event.o)
+ .debug_line      0x00059d        0x21e ../../library/os-lib/lib.X.a(os.o)
+ .debug_line      0x0007bb        0x177 ../../library/os-lib/lib.X.a(psw.o)
+ .debug_line      0x000932        0x185 ../../library/os-lib/lib.X.a(stimer.o)
+ .debug_line      0x000ab7        0x112 ../../library/os-lib/lib.X.a(str.o)
+ .debug_line      0x000bc9        0x198 ../../library/os-lib/lib.X.a(worker.o)
+ .debug_line      0x000d61         0xf2 ../../library/os-lib/lib.X.a(adc.o)
+ .debug_line      0x000e53         0xce ../../library/os-lib/lib.X.a(beep.o)
+ .debug_line      0x000f21         0x6a ../../library/os-lib/lib.X.a(queue.o)
 
 .debug_frame      0x000000        0xfe8
  *(.debug_frame)
@@ -1662,14 +1662,14 @@ __c30_signature
 .dinit            0x002bb8         0x62
  .dinit           0x002bb8         0x62 data_init
 
-.text             0x002c1a         0x66
+.text             0x002c1a         0x6e
  .text            0x002c1a         0x40 ../../library/os-lib/lib.X.a(mcu.o)
                   0x002c1a                  _MCU_UnlockRegisters
                   0x002c2c                  _MCU_LockRegisters
                   0x002c3e                  _MCU_Init
- .text            0x002c5a         0x26 ./output/main.o
+ .text            0x002c5a         0x2e ./output/main.o
                   0x002c5a                  _main
 
-.init.delay32     0x002c80         0x1c
- .init.delay32    0x002c80         0x1c c:/program files (x86)/microchip/xc16/v1.41/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
-                  0x002c80                  ___delay32
+.init.delay32     0x002c88         0x1c
+ .init.delay32    0x002c88         0x1c c:/program files (x86)/microchip/xc16/v1.41/bin/bin/../../lib\liblega-pic30-elf.a(delay32.Leo)
+                  0x002c88                  ___delay32
