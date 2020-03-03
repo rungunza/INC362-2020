@@ -5,7 +5,9 @@
 
  ### 1) Do not forget your computer (if you don't want to use the computer in the classroom).
 
- ### 2) In the Part 1.1, 1.2 and 2.1, books, documents, computers and all electonic devices are not allowed.
+ ### 2) In the 1.1, 1.2 and 2.1, books, documents, computers and all electonic devices are not allowed.
+
+ ### 3) In the 2.2, your answers (Codes & Simulations) will be checked in classroom.
 
 ## This is the thing you're waiting for..
 
